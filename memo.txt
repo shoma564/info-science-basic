@@ -1,0 +1,34 @@
+root@elk-stack-ubuntu:/home/shoma/zyou# cat kaizyo.c
+#include <stdio.h>
+long kaijo(int);
+
+int main(void){
+    int n;
+    n=4;
+    printf("%d!=%d\n" ,n,kaijo(n));
+}
+long kaijo(int n)
+{
+    if (n==0)
+      return 1L;
+    else
+      return n*kaijo(n-1);
+}
+root@elk-stack-ubuntu:/home/shoma/zyou#
+root@elk-stack-ubuntu:/home/shoma/zyou# gcc kaizyo.c
+kaizyo.c: In function ‘main’:
+kaizyo.c:7:18: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘long int’ [-Wformat=]
+    7 |     printf("%d!=%d\n" ,n,kaijo(n));
+      |                 ~^       ~~~~~~~~
+      |                  |       |
+      |                  int     long int
+      |                 %ld
+root@elk-stack-ubuntu:/home/shoma/zyou#
+root@elk-stack-ubuntu:/home/shoma/zyou# ./a.out
+4!=24
+root@elk-stack-ubuntu:/home/shoma/zyou#
+
+
+隣接行列を用意しておいて、
+訪問したかどうかを表すための印をつけて変数を用意しておく。
+印を初期化しておいて、for(j=1; J<=N;)
