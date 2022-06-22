@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+#define N 6
+#define M 9999
+
+int a[N+1][N+1]={ {},
+int j,k,p,
+for D[v]=INFINITY;
+X=0, D[s]=0
+
+while(x=!v){
+	
+	
+	for((u,v) s.t.)
+		D[v]=min(D[v],D[u]+c(u,v))
+}
+
+
+
